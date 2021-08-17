@@ -25,10 +25,12 @@ class RegistroUniformes extends Component
     public $nombrePaquete;
     public $nombrePrenda;
     public $playera60;
+    public $genero_id;
 
     public function mount($no_colaborador)
     {
         $this->colaborador = Colaborador::find($no_colaborador);
+        $this->genero_id = $this->colaborador->genero_id;
         $this->paquetes = DB::table('vu_paquete_prenda')->where('paquete_id', $this->paqueteId)->get();
         $this->totalSteps = count($this->paquetes) - 1;
         $this->nombrePaquete = $this->paquetes[0]->nombre_paquete;
@@ -113,6 +115,39 @@ class RegistroUniformes extends Component
             }
             if ($this->currentStep == 10) {
                 $this->tallas = Uniformes_talla::where('uniformes_prenda_id', 18)->get();
+            }
+        }
+        if ($this->paqueteId == 5) {
+            if ($this->currentStep == 0) {
+                $this->tallas = Uniformes_talla::where('uniformes_prenda_id', 14)->get();
+            }
+            if ($this->currentStep == 1) {
+                $this->tallas = Uniformes_talla::where('uniformes_prenda_id', 16)->get();
+            }
+            if ($this->currentStep == 2) {
+                $this->tallas = Uniformes_talla::where('uniformes_prenda_id', 11)->get();
+            }
+            if ($this->currentStep == 3) {
+                if ($this->genero_id == 1) {
+                    $this->tallas = Uniformes_talla::where('uniformes_prenda_id', 19)->get();
+                } elseif ($this->genero_id == 2) {
+                    $this->tallas = Uniformes_talla::where('uniformes_prenda_id', 21)->get();
+                }
+            }
+            if ($this->currentStep == 4) {
+                if () {
+                    # code...
+                }
+                $this->tallas = Uniformes_talla::where('uniformes_prenda_id', 6)->get();
+            }
+            if ($this->currentStep == 5) {
+                
+            }
+            if ($this->currentStep == 6) {
+                $this->tallas = Uniformes_talla::where('uniformes_prenda_id', 3)->get();
+            }
+            if ($this->currentStep == 7) {
+                $this->tallas = Uniformes_talla::where('uniformes_prenda_id', 7)->get();
             }
         }
     }
