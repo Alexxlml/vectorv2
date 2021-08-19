@@ -3,7 +3,7 @@
         <div class="p-2 grid">
             <div class="mb-2">
                 <p class="mt-4 antialiased text-left text-gray-700 font-semibold text-xl">
-                    {{ $nombrePaquete }}
+                    {{ $nombrePaquete }} {{ $currentStep }} - {{ $totalSteps }}
                 </p>
                 </p>
             </div>
@@ -572,7 +572,336 @@
                         @if($currentStep == 3)
                         <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
                             <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                @if($genero_id == 1)
+                                Talla de Truza 100 % Algodón
+                                @else
                                 Talla de Pantaleta 100 % Algodón
+                                @endif
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 4)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Brasiere Blanco
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 5)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Bota Dieléctrica
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 6)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Calcetas 100% Algodón
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @endif
+
+                        @if($paqueteId == 6)
+                        @if($currentStep == 0)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Pantalon de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 1)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Playera Tipo Polo
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 2)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Cofia 100% Algodón
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 3)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                @if($genero_id == 1)
+                                Talla de Truza 100 % Algodón
+                                @else
+                                Talla de Pantaleta 100 % Algodón
+                                @endif
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 4)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Brasiere Blanco
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 5)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Zapato Conductivo
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 6)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Bota Dieléctrica
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 7)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Calcetas 100% Algodón
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @endif
+
+                        @if($paqueteId == 7)
+                        @if($currentStep == 0)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Pantalon de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 1)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Camisola Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 2)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Cofia 100% Algodón
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 3)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Bota Dielectrica
                             </label>
                             <select id="playera60" wire:model="playera60" name="playera_60"
                                 class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
@@ -611,8 +940,640 @@
                             @enderror
                         </div>
                         @endif
+                        @if($currentStep == 5)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Calcetas 100% Algodón
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
                         @endif
 
+                        @if($paqueteId == 8)
+                        @if($currentStep == 0)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Pantalon de Poliester
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 1)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Bota Dielectrica
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 2)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Camisola Poliester
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @endif
+
+                        @if($paqueteId == 9)
+                        @if($currentStep == 0)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Pantalon de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 1)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Bota Dielectrica
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 2)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Camisola Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @endif
+
+                        @if($paqueteId == 10)
+                        @if($currentStep == 0)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Pantalon de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 1)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Bota Dielectrica
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 2)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Camisola Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 3)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Playera Tipo Polo
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @endif
+
+                        @if($paqueteId == 11)
+                        @if($currentStep == 0)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Pantalon de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 1)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Bota Dielectrica
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 2)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Playera Tipo Polo
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @endif
+
+                        @if($paqueteId == 12)
+                        @if($currentStep == 0)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Pantalon de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 1)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Camisola Poliester
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 2)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Playera Tipo Polo
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 3)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Pantalon de Poliester
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 4)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Bota Dielectrica
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 5)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Calcetas 100% Algodón
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @endif
+
+                        @if($paqueteId == 13)
+                        @if($currentStep == 0)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Pantalon de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 1)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Bota Antivibracion
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 2)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Camisa de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @endif
+
+                        @if($paqueteId == 14)
+                        @if($currentStep == 0)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Pantalon de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 1)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Bota Para Soldador
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 2)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Camisola de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @endif
+
+                        @if($paqueteId == 15)
+                        @if($currentStep == 0)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Pantalon de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 1)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Bota Dielectrica
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @if($currentStep == 2)
+                        <div class="mb-2 sm:m-0 col-span-1 col-start-1 px-4">
+                            <label for="playera60" class="block text-xl font-medium text-gray-700">
+                                Talla de Camisola de Mezclilla
+                            </label>
+                            <select id="playera60" wire:model="playera60" name="playera_60"
+                                class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option></option>
+                                @foreach ($tallas as $talla)
+                                <option value="{{ $talla->id }}">
+                                    {{ $talla->talla }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('playera60')
+                            <p class="mt-1 mb-1 text-xs text-red-600 italic">
+                                {{ $message }}
+                            </p>
+                            @enderror
+                        </div>
+                        @endif
+                        @endif
 
                     </div>
                 </div>
@@ -621,7 +1582,8 @@
             <div class="flex justify-start px-4 col-span-1 col-start-1">
                 <button type="button"
                     class="@if ($currentStep == 0) hidden @else @endif inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-                    wire:click="decreaseStep()">
+                    @if($paqueteId==5 || $paqueteId==6) @if ($currentStep==5) wire:click="doubleDecreaseStep()" @else
+                    wire:click="decreaseStep()" @endif @else wire:click="decreaseStep()" @endif>
                     Regresar
                 </button>
             </div>
