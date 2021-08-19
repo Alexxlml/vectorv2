@@ -43,8 +43,9 @@ class RegistroUniformes extends Component
         return view('livewire.registro-uniformes')->layout('layouts.guest');
     }
 
-    public function checkPaquete(){
-        if($this->paqueteId == 5 || $this->paqueteId == 6){
+    public function checkPaquete()
+    {
+        if ($this->paqueteId == 5 || $this->paqueteId == 6) {
             $this->totalSteps = $this->totalSteps - 1;
         }
     }
